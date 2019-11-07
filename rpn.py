@@ -2,6 +2,8 @@
 
 
 import operator
+import colorama
+from colorama import Fore, init
 
 
 operators = {
@@ -35,7 +37,11 @@ def main():
     while True:
         result = calculate(input("rpn calc> "))
         result = result-1
-        print("Result: ", result)
+        if (result > 0):
+            print("Result: ", Fore.CYAN + str(result))
+        else:
+            print("Result: ", Fore.RED + str(result))
+
 
 if __name__ == '__main__':
     main()
