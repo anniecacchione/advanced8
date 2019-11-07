@@ -13,6 +13,8 @@ operators = {
 }
 
 def calculate(myarg):
+    for i in range(0,100):
+        i +=1
     stack = list()
     for token in myarg.split():
         try:
@@ -32,6 +34,7 @@ def calculate(myarg):
 def main():
     while True:
         result = calculate(input("rpn calc> "))
+        result = result-1
         print("Result: ", result)
 
 if __name__ == '__main__':
